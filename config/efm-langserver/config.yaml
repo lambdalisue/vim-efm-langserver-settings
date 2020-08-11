@@ -147,6 +147,10 @@ tools:
     format-command: 'shfmt -ln bash -i 2 -bn -ci -sr -kp'
     format-stdin: true
 
+  checkmake-lint: &checkmake-lint
+    lint-command: 'checkmake'
+    lint-stdin: true
+
   flake8-lint: &flake8-lint
     lint-command: 'flake8 --stdin-display-name ${INPUT} -'
     lint-stdin: true
@@ -303,6 +307,9 @@ languages:
 
   sugarss:
     - <<: *stylelint-lint
+
+  make:
+    - <<: *checkmake-lint
 
   python:
     - <<: *flake8-lint

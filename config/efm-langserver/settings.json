@@ -74,6 +74,12 @@
     ]
   },
   {
+    "cmd": "checkmake",
+    "whitelist": [
+      "make"
+    ]
+  },
+  {
     "cmd": "flake8",
     "whitelist": [
       "python"
